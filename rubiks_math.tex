@@ -42,13 +42,40 @@ $F^{-2}$, whichever is preferred.
 
 \begin{math}
   %
-  F = (ful fur fdr fdl) (fu fr fd fl) \\
-  U = (ful fur bur bul) (fu ru bu lu) \\
-  B = (bul bur bdr bdl) (bu bl bd br) \\
-  D = (fdl fdr bdr bdl) (fd rd bd ld) \\
-  L = (bul ful fdl bdl) (lu fl dl bl) \\
-  R = (bur fur fdr bdr) (ru fr dr br) \\
+  F = \text{(ful fur fdr fdl) (fu fr fd fl)} \\
+  U = \text{(ful fur bur bul) (fu ru bu lu)} \\
+  B = \text{(bul bur bdr bdl) (bu bl bd br)} \\
+  D = \text{(fdl fdr bdr bdl) (fd rd bd ld)} \\
+  L = \text{(bul ful fdl bdl) (lu fl dl bl)} \\
+  R = \text{(bur fur fdr bdr) (ru fr dr br)} \\
   %
 \end{math}
-  
 
+We can define macro operations by compositions of these cyclic
+functions.  For example, the conjugacy of $D$ by $F$ is:
+
+\begin{align*}
+  %
+  F^{-1}DF 
+  &= \text{(fdl fdr fur ful) (fl fd fr fu)     % F^{-1}
+           (fdl fdr bdr bdl) (fd rd bd ld)     % D
+           (ful fur fdr fdl) (fu fr fd fl)} \\ % F
+  &= \text{(fur bdr bdl fdr) (ful) (fdl) (fr rd bd ld) (fu) (fl)} \\
+  &= \text{(fur bdr bdl fdr) (fr rd bd ld)}
+  %
+\end{align*}
+  
+And the commutator of $F$ and $D$ is:
+
+\begin{align*}
+  %
+  F^{-1}D^{-1}FD
+  = &\text{(fdl fdr fur ful) (fl fd fr fu)     % F^{-1}
+           (bdl bdr fdr fdl) (ld bd rd fd)} \\ % D^{-1}
+    &\text{(ful fur fdr fdl) (fu fr fd fl)     % F
+           (fdl fdr bdr bdl) (fd rd bd ld)} \\ % D
+  = &\text{(fdl bdl) (fdr fur) (bdr) (ful) (fd fr ld) (rd) (bd) (fu) (fl)} \\
+  = &\text{(fdl bdl) (fdr fur) (fd fr ld)}
+  %
+\end{align*}
+  
