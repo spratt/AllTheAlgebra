@@ -80,3 +80,19 @@ And the commutator of $F$ and $D$ is:
 \end{align*}
   
 Remembering that $(F^{-1}D^{-1}FD)^{-1} = D^{-1}F^{-1}DF$.
+
+And since 2 cycles are their own inverses, we can run this move twice to attain:
+
+\begin{align*}
+  %
+  M = F^{-1}D^{-1}FDF^{-1}D^{-1}FD 
+  = &\text{(fdl bdl) (fdr fur) (fd fr ld) (fdl bdl) (fdr fur) (fd fr ld)} \\
+  = &\text{(fd ld fr)}
+  %
+\end{align*}
+
+We now have a minimal move on the edge cubies.  For those following
+along, you may notice that the corner cubies are in the correct
+location but twisted, which our notation does not capture.
+
+
