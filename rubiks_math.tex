@@ -22,3 +22,33 @@ Which on my cube gives:
   R = \text{green} \\
   %
 \end{math}
+
+We refer to the little cubes that make up the whole cube as
+``cubies''.  Each cubie has a unique name determined by its colors.
+An edge cubie has two colors, and an example of one is the front-up
+cubie (which in my case is colored white and red), or ``fu''.  A
+corner cubie has three colors, e.g. fur (white, red, green).  
+
+A center cubie only has one color, but since they always stay in the
+same place relative to other center cubies, we can disregard them
+except to determine which face is which in an unsolved cube.
+
+Using cycle notation, we can now define operations on the cubes.  The
+move $F$ is to turn the front face clockwise by 90 degrees.  Moving
+the front face anti-clockwise by 90 degrees is the inverse of the $F$
+operation, so we consider this $F^{-1}$.  Moving the front face
+clockwise or anti-clockwise by 180 degrees is either $F^2$ or
+$F^{-2}$, whichever is preferred.
+
+\begin{math}
+  %
+  F = (ful fur fdr fdl) (fu fr fd fl) \\
+  U = (ful fur bur bul) (fu ru bu lu) \\
+  B = (bul bur bdr bdl) (bu bl bd br) \\
+  D = (fdl fdr bdr bdl) (fd rd bd ld) \\
+  L = (bul ful fdl bdl) (lu fl dl bl) \\
+  R = (bur fur fdr bdr) (ru fr dr br) \\
+  %
+\end{math}
+  
+
