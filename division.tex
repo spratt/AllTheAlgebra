@@ -1,1 +1,13 @@
 \chapter{Division}
+
+\section{The Extended Euclidean Algorithm}
+
+Given numbers $a,b$ with which we would like to calculate $gcd(a,b)$,
+we can do so using the Euclidean Algorithm.  Without loss of
+generality, say $ a > b $.  Let $r_0 = a, r_1 = b$.  We divide
+$r_{i-2},r_{i-1}$ to give us $r_{i-2} = r_{i-1} \times q_i + r_i$.  We
+continue dividing until we find a $k$ such that $r_k = 0$.
+
+The ``extension'' of the Euclidean Algorithm also gives us $s_i, t_i$
+such that $ b \times r_i = b \times s_i + a \times t_i $.  This is
+important for \emph{RSA Encryption}.

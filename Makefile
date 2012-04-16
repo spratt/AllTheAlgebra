@@ -2,7 +2,9 @@
 
 ASSIGN		= notes
 
-PARTS		= rubiks_math
+PARTS		= rubiks_math \
+		  relations \
+		  division
 
 MAIN_TEX	= ${ASSIGN}.tex
 
