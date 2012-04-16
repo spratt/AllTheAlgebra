@@ -4,7 +4,8 @@ ASSIGN		= notes
 
 PARTS		= rubiks_math \
 		  relations \
-		  division
+		  division \
+		  monoids
 
 MAIN_TEX	= ${ASSIGN}.tex
 
