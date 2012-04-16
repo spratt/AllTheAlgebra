@@ -1,1 +1,14 @@
 \chapter{Monoids}
+
+A \emph{binary operation} is a mapping from $A \cross B$ to $ C $.
+
+A binary operation is said to be \emph{closed} if it maps from $A
+\cross A$ to $A$.
+
+A closed binary operation ( $ \dot $ ) is said to be
+\emph{associative} if $ \forall a,b,c \in A: ( a \dot b ) \dot c = a
+\dot ( b \dot c )$.
+
+A \emph{monoid} is a 3-tuple $(\dot, M, e)$ where $\dot$ is an
+associative, closed binary operation on $M$ and $ e \in M: \forall m
+\in M: e \dot m = m $.
