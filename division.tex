@@ -6,10 +6,11 @@ Given numbers $a,b$ with which we would like to calculate $gcd(a,b)$,
 we can do so using the Euclidean Algorithm.  Without loss of
 generality, say $ a > b $.  Let $r_0 = a, r_1 = b$.  We divide
 $r_{i-2},r_{i-1}$ to give us $r_{i-2} = r_{i-1} \times q_i + r_i$.  We
-continue dividing until we find a $k$ such that $r_k = 0$.
+continue dividing until we find the smallest $k$ such that $r_k = 0$, at which
+point $gcd(a,b) = r_{k-1}$.
 
 The ``extension'' of the Euclidean Algorithm also gives us $s_i, t_i$
-such that $ b \times r_i = b \times s_i + a \times t_i $.  This is
+such that $ r_i = b \times s_i + a \times t_i $.  This is
 important for \emph{RSA Encryption}.  We define $s_0 = 1, s_1 = 0, t_0
 = 0, t_1 = 1$ and calculate $ s_i = s_{i-2} - q_is_{i-1} $ and $ t_i =
 t_{i-2} - q_it_{i-1} $.
@@ -17,7 +18,7 @@ t_{i-2} - q_it_{i-1} $.
 We build a table thusly:
 
 \[
-\begin{array}{ c c c c c }
+\begin{array}{ c | c c c c }
   i & q_i & r_i & s_i & t_i \\
   \hline
   0 & n/a & 39  & 1   & 0   \\
@@ -30,3 +31,4 @@ We build a table thusly:
 \end{array}
 \]  
 
+So we know $gcd(14,39) = 1 = 39 \times -10 + 14 \times 23$.
