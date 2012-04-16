@@ -15,11 +15,24 @@
 \usepackage{amsthm}
 \usepackage{amssymb}
 \usepackage{parskip}
-%\usepackage{algorithm}
+\usepackage{hyperref}
 \usepackage{algorithmic}
 \usepackage{multicol}
-%\usepackage{newclude} % \include without \clearpage
-%\usepackage{ulsy} % needed for \blitza
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Extra stuff from John Howat
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\implies}{\rightarrow}
+\newcommand{\same}{\leftrightarrow}
+\newcommand{\cross}{\times}
+\newcommand{\xor}{\oplus}
+\newcommand{\zz}{\mathbb{Z}}
+\newcommand{\BigOh}[1]{O\!\left(#1\right)}
+\newcommand{\LittleOh}[1]{o\!\left(#1\right)}
+\newcommand{\BigOmega}[1]{\Omega\!\left(#1\right)}
+\newcommand{\LittleOmega}[1]{\omega\!\left(#1\right)}
+\newcommand{\BigTheta}[1]{\Theta\!\left(#1\right)}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Theorem, Lemma and Definitions
@@ -65,8 +78,17 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Document
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{Algebra Notes}
+\date{}
+\author{Simon Pratt}
+
 \begin{document}
-  
-  \include{rubiks_math}
+\maketitle
+\tableofcontents
+
+\include{relations}
+\include{division}
+\include{rubiks_math}
 
 \end{document}
