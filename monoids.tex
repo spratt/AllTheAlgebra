@@ -12,3 +12,39 @@ A closed binary operation ( $ \dot $ ) is said to be
 A \emph{monoid} is a 3-tuple $(\dot, M, e)$ where $\dot$ is an
 associative, closed binary operation on $M$ and $ e \in M: \forall m
 \in M: e \dot m = m $.
+
+\section{Row Monomials}
+
+We define the \emph{row monomials}, $RM(n)$, as the set of all $0,1$
+matrices with exactly one $1$ per row.  We will show that
+$(\dot,RM(n),I_n)$ forms a monoid, where $\dot$ is matrix
+multiplication, and $I_n$ is the identity for $n \cross n$ matrices.
+Since matrix multiplication is associative in general, we need only
+prove the following claim:
+
+\begin{claim}
+
+  $RM(n)$ is closed under matrix multiplication.
+
+\end{claim}
+
+\begin{proof}
+
+  Let $A,B \in RM(n)$.  $A$ is composed of the elements $a_{ij}$.  For
+  all $1 \leq i \leq n$ there exists a unique $l$ such that $a_{il} =
+  1$ and for all $j \neq l$, $a_{ij} = 0$.
+
+  \[
+  (AB)_{ij} = \summ{k=1}{n} a_{ik}b_{kj} = a_{il}b_{lj} = b_{lj}
+  \]
+
+  \[
+  \therefore (AB)_{ij} \in RM(n)
+  \]
+  
+\end{proof}
+
+Thus proving $RM(n)$ is a monoid.
+
+\section{Deterministic Finite Automata}
+
