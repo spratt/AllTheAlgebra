@@ -48,3 +48,38 @@ Thus proving $RM(n)$ is a monoid.
 
 \section{Deterministic Finite Automata}
 
+A \emph{Deterministic Finite Automata} (DFA) is a 5-tuple
+$(A,S,s,F,\delta)$ where $A$ is a set of symbols called the
+\emph{alphabet}, $S = \{ s_1, s_2, ..., n \} $ is the set of states,
+$s \in S$ is the \emph{start state}, $F \subseteq S$ is the set of all
+accept states, and finally $\delta: A \cross S \rightarrow S$ is the
+transition function which returns the next state when given the
+current state and a symbol to read.  A DFA reads a string one
+character at a time, transitioning from state to state until no more
+characters can be read.  At which point, the DFA either \emph{accepts}
+the string if the current state is in the set $F$, or \emph{rejects}
+the string otherwise.
+
+We can model a DFA using row monomials thusly:
+
+\begin{enumerate}
+\item to each state $s_k : 1 \leq k \leq n$, we associate a vector
+  such that
+  \begin{math}
+    [s]_i = \left\{
+      \begin{array}{l l}
+        1 & \text{if } i = k \\
+        0 & \text{otherwise}
+      \end{array} \right.
+  \end{math}
+
+\item to each letter $a \in A$, we associate a matrix from $RM(n)$,
+  such that
+  \begin{math}
+    [a]_{ij} = \left\{
+      \begin{array}{l l}
+        1 & \text{if } \delta(s_i,a) = s_j \\
+        0 & \text{otherwise}
+      \end{array} \right.
+  \end{math}
+\end{enumerate}
