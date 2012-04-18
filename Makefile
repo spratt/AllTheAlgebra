@@ -5,7 +5,8 @@ ASSIGN		= notes
 PARTS		= rubiks_math \
 		  relations \
 		  division \
-		  monoids
+		  monoids \
+		  groups
 
 MAIN_TEX	= ${ASSIGN}.tex
 

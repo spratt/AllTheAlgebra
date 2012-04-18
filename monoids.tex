@@ -13,6 +13,16 @@ A \emph{monoid} is a 3-tuple $(\dot, M, e)$ where $\dot$ is an
 associative, closed binary operation on $M$ and the identity element $
 e \in M: \forall m \in M: e \dot m = m $.
 
+An \emph{inverse} is an element $\forall a \in A \exists a' \in A: a
+\dot a' = e \text{OR} a' \dot a = e$.  This element is a \emph{left
+  inverse} if $a' \dot a = e$ or a \emph{right inverse} if $a \dot a'
+= e$ and is a \emph{full inverse} if it is both a right inverse and a
+left inverse.
+
+It is easy to prove that a left inverse is unique given right
+cancelation, a right inverse is unique given left cancelation and a
+full inverse is unique from either left or right cancelation.
+
 \section{Row Monomials}
 
 We define the \emph{row monomials}, $RM(n)$, as the set of all $0,1$
