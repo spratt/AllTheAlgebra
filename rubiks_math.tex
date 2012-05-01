@@ -96,7 +96,7 @@ follows:
 \begin{align*}
   %
   T_1
-  &= U^{-1}M_1^{-1}UM \\
+  &= U^{-1}M_1^{-1}UM_1 \\
   &= CD \\
   & \\
   C
@@ -132,6 +132,17 @@ will be moved back into position.
   %
 \end{align*}
 
+So our full move is (read right to left):
+
+\begin{align*}
+  %
+  Z_1^{-1} T_1 Z_1
+  &= B^{-1} T_1 B \\
+  &= B^{-1} U^{-1} M_1^{-1} U M_1 B \\
+  &= B^{-1} U^{-1} F^{-1}D^{-1}F U FDF^{-1} B
+  %
+\end{align*}
+
 Now let's say we would like (bdl bur bul).  We need to move ful to
 bur, and fur to bul.  This can be done easily with $Z_2 = U^2$, which
 is conveniently its own inverse.
@@ -145,6 +156,17 @@ is conveniently its own inverse.
   Z_2^{-1}T_1Z_2
   &= U^2T_1U^2 = \text{(ful bur)(bul fur)(bdl ful fur)(ful bur)(bul fur)} \\
   &= \text{(bul bdl bur)}
+  %
+\end{align*}
+
+So our full move is (read right to left):
+
+\begin{align*}
+  %
+  Z_2^{-1} T_1 Z_2
+  &= U^2 T_1 U^2 \\
+  &= U^2 U^{-1} M_1^{-1} U M_1 U^2 \\
+  &= U F^{-1}D^{-1}F U FDF^{-1} U^2
   %
 \end{align*}
   
