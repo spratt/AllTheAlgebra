@@ -114,5 +114,37 @@ follows:
   %
 \end{align*}
   
+As it turns out, this is the minimal move on corner cubies.  Using
+this, we can create moves on any three corner cubies by conjugation.
+Let's say we would like to move bul instead of bdl.  We can do this
+using conjugation.  First we find a move which moves the cubie we want
+to move into the cubicle we know how to move.  In the example of
+moving bul of bdl, we need only move bul bdl, so our move $Z_1$ is
+simply $B$.  Then we conjugate, ignoring the edge cubies since they
+will be moved back into position.
 
+\begin{align*}
+  %
+  Z_1^{-1}T_1Z_1
+  &= B^{-1}T_1B \\
+  &= \text{(bdr bdl bul bur)(bdl ful fur)(bur bul bdl bdr)} \\
+  &= \text{(bul ful fur)}
+  %
+\end{align*}
 
+Now let's say we would like (bdl bur bul).  We need to move ful to
+bur, and fur to bul.  This can be done easily with $Z_2 = U^2$, which
+is conveniently its own inverse.
+
+\begin{align*}
+  %
+  U^2
+  &= UU = \text{(ful bul bur fur)(ful bul bur fur)} \\
+  &= \text{(ful bur)(bul fur)} \\
+  & \\
+  Z_2^{-1}T_1Z_2
+  &= U^2T_1U^2 = \text{(ful bur)(bul fur)(bdl ful fur)(ful bur)(bul fur)} \\
+  &= \text{(bul bdl bur)}
+  %
+\end{align*}
+  
